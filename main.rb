@@ -11,7 +11,7 @@ begin
   questions = File.readlines(question_path, encoding: 'UTF-8')
   results = File.readlines(results_path, encoding: 'UTF-8')
 rescue
-  abort "Файл с результатами не найден"
+  abort "Файл с результатами не найден."
 end
 
 #Создаем объекты классов
@@ -39,6 +39,3 @@ end
 
 # Выводим результат теста, передав объект test в метод объекта result
 result.print_results(test)
-
-
-

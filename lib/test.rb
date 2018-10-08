@@ -1,5 +1,7 @@
 # Класс Test, описывает процесс прохождения теста и хранит вопросы
 class Test
+  attr_reader :score
+
   def initialize(questions)
     #Номер текущего вопроса
     @current_question = 0
@@ -25,16 +27,11 @@ class Test
 
   #Метод, проверяющий остались ли еще воросы
   def final_question?
-    return @current_question == @questions.size
+    @current_question == @questions.size
   end
 
   #Метод показывает вопрос
   def show_question
     @questions[@current_question]
-  end
-
-  #Геттер для @score
-  def score
-    return @score
   end
 end
