@@ -1,11 +1,11 @@
 #Подключаем файлы с классами
-require_relative 'test.rb'
-require_relative 'result_printer.rb'
+require_relative 'lib/test'
+require_relative 'lib/result_printer'
 
 current_path = File.dirname(__FILE__)
 
-question_path = current_path + "/data/questions.txt"
-results_path = current_path + "/data/results.txt"
+question_path = "#{current_path}/data/questions.txt"
+results_path = "#{current_path}/data/results.txt"
 
 begin
   questions = File.readlines(question_path, encoding: 'UTF-8')
