@@ -1,5 +1,8 @@
 # Класс Test, описывает процесс прохождения теста и хранит вопросы
 class Test
+  YES_ANSWER = 2
+  NO_ANSWER = 1
+
   attr_reader :score
 
   def initialize(questions)
@@ -16,9 +19,9 @@ class Test
   #Метод изменяет общий счет ответов
   def process(user_choice)
     if user_choice == 1
-      @score += 2
+      @score += YES_ANSWER
     elsif user_choice == 3
-      @score += 1
+      @score += NO_ANSWER
     end
 
     #увеличиваем номер текещего вопроса
